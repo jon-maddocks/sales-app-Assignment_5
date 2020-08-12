@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGO_URL,{
 
 
 const app = express(); //creates express application and returns an object
-const port=process.env.PORT; //selects the port to be used
+const port=process.env.PORT || 8080; //selects the port to be used
 app.listen(port) // starts listening for client requests on specified port
 app.use(express.json());
 
