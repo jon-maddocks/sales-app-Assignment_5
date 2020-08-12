@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='./css/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+
+    <h1>{{title}}</h1>
+    <p>Welcome to {{description}}</p>
+    <div class="row">
+        <div id = "lstLocs" class="list-group col-6"></div>
+        <div id ="slcCard" class="card mx-auto " style="width: 25%;">
+            <div class="card-body">
+                <h5 id="slcTitle" class="card-title"></h5>
+                <p id="slcBody" class="card-text"></p>
+                <p id = "slcName" class="card-text"></p>
+                <p id = "slcCategory" class="card-text"></p>
+                <p id = "slcPrice" class="card-text"></p>
+                <p id="slcLocation" class="card-text"></p>
+                <p id= "slcContact" class="card-text"></p>
+                
+            </div>
+        </div>
+
+    </div><br><br>
+<div class="jumbotron col-6">
+  <h1 class="display-8">Add your Item!</h1>
+  
+  <hr class="my-4">
+
+   <form >
+  <div class="form-group ">
+    <label for="category">Item</label><br>
+    <input type="text" placeholder="Enter an Item" class="form-control col-4" id="title"><br><br>
+    <label for="category">Description</label><br>
+    <textarea  placeholder="Add a Description" class="form-control " id="body"></textarea><br><br>
+    <label for="category">Seller Name</label><br>
+    <input type="text" value="anonymous" class="form-control col-4" id="name"><br><br> 
+    
+    <label for="category">Choose a category:</label><br>
+        <select name="category" id="category">
+            <option value="Electronics">Electronics</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Other">Other</option>
+        </select>
+    <br><br><br>
+
+    <label for="category">Price</label><br>
+    <input type="text" placeholder="$$$" class="form-control col-4" id="price"><br><br> 
+
+    <label for="category">Location</label><br>
+    <div class="row">
+        <input type="text" placeholder="Latitude" class="form-control col-2 mr-2 ml-3" id="lat">
+        <input type="text" placeholder="Longitude" class="form-control col-2 mr-2 ml-3" id="lon">
+    </div>
+    <br><br>
+    <label for="category">Contact Info</label><br>
+    <input type="text" placeholder="Contact" class="form-control col-4" id="contact"><br><br> 
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </div>  
+    </form>
+</div>
+
+
+    <p style="font-size: 160%;color:red" id="id_item"></p><br><br> 
+
+
+<div class="jumbotron col-sm-6">
+    <h1 class="display-8">Delete Item!</h1>
+    <hr class="my-4">
+    <form id="deleteForm">
+        <div class="form-group ">
+            <input type="text" placeholder="Enter ID" class="form-control col-4" id="delete"><br><br>
+            <button type="submit" class="btn btn-dark">Delete</button>
+        </div>
+    </form>
+</div>
+    
+
+
+   
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    <script src="scripts/index.js"></script>  
+  </body>
+</html>
