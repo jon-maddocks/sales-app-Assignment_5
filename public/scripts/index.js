@@ -93,7 +93,7 @@ inputForm.addEventListener('submit',(e)=>{
     }
 
 
-    fetch('/items/', {
+    fetch('/items', {
         method: 'POST',
         headers: {'Content-Type': 'application/json',},
         body: JSON.stringify(post_request_object),
@@ -125,7 +125,7 @@ deleteForm.addEventListener('submit',(e)=>{
     const deleteID = document.getElementById('delete').value;
     console.log(deleteID);
 
-    fetch('/items/' + deleteID, {
+    fetch('/items' + deleteID, {
         method: 'DELETE',
         })
         .then(response => response.json())
